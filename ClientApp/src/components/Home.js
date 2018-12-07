@@ -29,7 +29,7 @@ const Home = () => (
         for layout and styling
       </li>
     </ul>
-    <p>To help you get started, we&#39ve also set up:</p>
+    <p>To help you get started, we&apos;ve also set up:</p>
     <ul>
       <li>
         <strong>Client-side navigation</strong>
