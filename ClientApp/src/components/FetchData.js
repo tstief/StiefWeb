@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { actionCreators } from '../store/WeatherForecasts';
 
 function renderForecastsTable(forecasts) {
   return (
@@ -43,7 +40,7 @@ function renderPagination(startDateIndex, isLoading) {
   );
 }
 
-class FetchData extends Component {
+export default class FetchData extends Component {
   componentDidMount() {
     // This method is called when the component is first added to the document
     this.ensureDataFetched();
@@ -96,8 +93,3 @@ FetchData.propTypes = {
   }).isRequired,
   requestWeatherForecasts: PropTypes.func.isRequired,
 };
-
-export default connect(
-  state => state.weatherForecasts,
-  dispatch => bindActionCreators(actionCreators, dispatch),
-)(FetchData);

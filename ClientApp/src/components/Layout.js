@@ -1,12 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container } from 'reactstrap';
 import NavMenu from './NavMenu';
 
-export default props => (
+const Layout = ({ children }) => (
   <div>
     <NavMenu />
     <Container>
-      {props.children}
+      {children}
     </Container>
   </div>
 );
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Layout;

@@ -1,8 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { actionCreators } from '../store/Counter';
 
 const Counter = ({ count, increment }) => (
   <div>
@@ -30,7 +27,4 @@ Counter.propTypes = {
   increment: PropTypes.func.isRequired,
 };
 
-export default connect(
-  state => state.counter,
-  dispatch => bindActionCreators(actionCreators, dispatch),
-)(Counter);
+export default Counter;
