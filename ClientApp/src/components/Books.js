@@ -7,11 +7,11 @@ export default class Books extends Component {
     this.ensureBooksFetched();
   }
 
-  componentDidUpdate() {
-    // console.log('update called');
-    // This method is called when the route parameters change
-    this.ensureBooksFetched();
-  }
+  // componentDidUpdate() {
+  //   // console.log('update called');
+  //   // This method is called when the route parameters change
+  //   this.ensureBooksFetched();
+  // }
 
   ensureBooksFetched() {
     const { requestBooks } = this.props;
