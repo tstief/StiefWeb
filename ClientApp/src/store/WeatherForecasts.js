@@ -4,7 +4,9 @@ const initialState = { forecasts: [], isLoading: false };
 
 export const actionCreators = {
   requestWeatherForecasts: startDateIndex => async (dispatch, getState) => {
-    if (startDateIndex === getState().weatherForecasts.startDateIndex) {
+    const currentState = getState().weatherForecasts;
+    console.log(currentState);
+    if (startDateIndex === currentState.startDateIndex) {
       // Don't issue a duplicate request (we already have or are loading the requested data)
       return;
     }

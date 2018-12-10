@@ -5,6 +5,7 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
 import * as Counter from './Counter';
 import * as WeatherForecasts from './WeatherForecasts';
+import * as Books from './Books';
 
 export default function configureStore(history, initialState) {
   const middleware = [
@@ -22,6 +23,7 @@ export default function configureStore(history, initialState) {
   const rootReducer = combineReducers({
     counter: Counter.reducer,
     weatherForecasts: WeatherForecasts.reducer,
+    bookCatalog: Books.reducer,
     router: connectRouter(history),
   });
 
